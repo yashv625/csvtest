@@ -1,0 +1,9 @@
+<csvt>
+	<gen count="5">
+		<counter/>
+		<row values="Hello,World" />
+	</gen>
+	<gen>
+		<row values="Goodbye" />
+	</gen>
+</csvt>

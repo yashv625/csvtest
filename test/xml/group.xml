@@ -1,0 +1,17 @@
+<csvt>
+	<gen count="7">
+		<group fields="1">
+			<rows random="no">
+				Fred,X
+				Fred,Y
+				Bill,K
+				Jim,Z
+				Jim,A
+				Jim,B
+				Eric,C
+			</rows>
+			<int_seq begin="1" end="100" />
+			<rand_int/>
+		</group>
+	</gen>
+</csvt>

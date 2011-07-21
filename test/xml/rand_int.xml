@@ -1,0 +1,7 @@
+<csvt>
+	<gen count="10">
+		<rand_int />
+		<rand_int begin="1" end="10" />
+		<rand_int begin="1" end="10" mode="10"/>
+	</gen>
+</csvt>

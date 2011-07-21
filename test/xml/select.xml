@@ -1,0 +1,17 @@
+<csvt>
+	<gen count="5" >
+		<select>
+			<rows values="dog,cat,hamster" />
+			<case values="dog">
+				<rows values="Rover,Fido,Bowser,Rex,Butch" />
+			</case>
+			<case values="cat">
+				<rows values="Puss,Fluffy,Cuddles" />
+			</case>
+			<case values="hamster" >
+				<rows values="Hammy,SPG" />
+				<row values="Rodents Rule!" />
+			</case>
+		</select>
+	</gen>
+</csvt>

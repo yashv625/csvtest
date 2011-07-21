@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="csvtest" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\csvtest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DDMK_TEST" />
+					<Add directory="inc" />
+					<Add directory="..\alib\inc" />
+				</Compiler>
+				<Linker>
+					<Add library="..\alib\lib\alib.a" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="cp  bin/Debug/csvtest.exe ." />
+					<Mode after="always" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="\bin\Release\csvtest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="..\alib\inc\_template.h" />
+		<Unit filename="..\alib\inc\a_assert.h" />
+		<Unit filename="..\alib\inc\a_base.h" />
+		<Unit filename="..\alib\inc\a_chsrc.h" />
+		<Unit filename="..\alib\inc\a_collect.h" />
+		<Unit filename="..\alib\inc\a_csv.h" />
+		<Unit filename="..\alib\inc\a_date.h" />
+		<Unit filename="..\alib\inc\a_db.h" />
+		<Unit filename="..\alib\inc\a_debug.h" />
+		<Unit filename="..\alib\inc\a_dict.h" />
+		<Unit filename="..\alib\inc\a_enc.h" />
+		<Unit filename="..\alib\inc\a_env.h" />
+		<Unit filename="..\alib\inc\a_except.h" />
+		<Unit filename="..\alib\inc\a_expr.h" />
+		<Unit filename="..\alib\inc\a_file.h" />
+		<Unit filename="..\alib\inc\a_html.h" />
+		<Unit filename="..\alib\inc\a_lib.h" />
+		<Unit filename="..\alib\inc\a_log.h" />
+		<Unit filename="..\alib\inc\a_math.h" />
+		<Unit filename="..\alib\inc\a_myth.h" />
+		<Unit filename="..\alib\inc\a_nameval.h" />
+		<Unit filename="..\alib\inc\a_rand.h" />
+		<Unit filename="..\alib\inc\a_range.h" />
+		<Unit filename="..\alib\inc\a_regex.h" />
+		<Unit filename="..\alib\inc\a_shstr.h" />
+		<Unit filename="..\alib\inc\a_sort.h" />
+		<Unit filename="..\alib\inc\a_str.h" />
+		<Unit filename="..\alib\inc\a_table.h" />
+		<Unit filename="..\alib\inc\a_test.h" />
+		<Unit filename="..\alib\inc\a_valptr.h" />
+		<Unit filename="..\alib\inc\a_xmlevents.h" />
+		<Unit filename="..\alib\inc\a_xmlparser.h" />
+		<Unit filename="..\alib\inc\a_xmltree.h" />
+		<Unit filename="csvtest.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="inc\dmk_base.h" />
+		<Unit filename="inc\dmk_fieldlist.h" />
+		<Unit filename="inc\dmk_fileman.h" />
+		<Unit filename="inc\dmk_model.h" />
+		<Unit filename="inc\dmk_modman.h" />
+		<Unit filename="inc\dmk_random.h" />
+		<Unit filename="inc\dmk_row.h" />
+		<Unit filename="inc\dmk_run.h" />
+		<Unit filename="inc\dmk_source.h" />
+		<Unit filename="inc\dmk_strings.h" />
+		<Unit filename="inc\dmk_tagdict.h" />
+		<Unit filename="inc\dmk_types.h" />
+		<Unit filename="inc\dmk_xmlutil.h" />
+		<Unit filename="src\base\dmk_base.cpp" />
+		<Unit filename="src\base\dmk_fieldlist.cpp" />
+		<Unit filename="src\base\dmk_fileman.cpp" />
+		<Unit filename="src\base\dmk_model.cpp" />
+		<Unit filename="src\base\dmk_modman.cpp" />
+		<Unit filename="src\base\dmk_random.cpp" />
+		<Unit filename="src\base\dmk_row.cpp" />
+		<Unit filename="src\base\dmk_run.cpp" />
+		<Unit filename="src\base\dmk_source.cpp" />
+		<Unit filename="src\base\dmk_tagdict.cpp" />
+		<Unit filename="src\base\dmk_xmlutil.cpp" />
+		<Unit filename="src\tags\dmk_composite.cpp" />
+		<Unit filename="src\tags\dmk_counter.cpp" />
+		<Unit filename="src\tags\dmk_datafile.cpp" />
+		<Unit filename="src\tags\dmk_dates.cpp" />
+		<Unit filename="src\tags\dmk_eval.cpp" />
+		<Unit filename="src\tags\dmk_generator.cpp" />
+		<Unit filename="src\tags\dmk_group.cpp" />
+		<Unit filename="src\tags\dmk_intseq.cpp" />
+		<Unit filename="src\tags\dmk_many2many.cpp" />
+		<Unit filename="src\tags\dmk_mask.cpp" />
+		<Unit filename="src\tags\dmk_memory.cpp" />
+		<Unit filename="src\tags\dmk_merge.cpp" />
+		<Unit filename="src\tags\dmk_pick.cpp" />
+		<Unit filename="src\tags\dmk_product.cpp" />
+		<Unit filename="src\tags\dmk_range.cpp" />
+		<Unit filename="src\tags\dmk_realseq.cpp" />
+		<Unit filename="src\tags\dmk_rowsrc.cpp" />
+		<Unit filename="src\tags\dmk_select.cpp" />
+		<Unit filename="src\tags\dmk_shuffle.cpp" />
+		<Unit filename="src\tags\dmk_timeseq.cpp" />
+		<Unit filename="src\tags\dmk_union.cpp" />
+		<Unit filename="src\tags\dmk_unique.cpp" />
+		<Unit filename="src\test_main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

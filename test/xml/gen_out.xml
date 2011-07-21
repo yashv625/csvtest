@@ -1,0 +1,20 @@
+<csvt>
+	<echo>Test commented out</echo>
+	<!--
+	<echo>Five counters</echo>
+	<gen count="5">
+		<counter/>
+	</gen>
+	<echo>Five counters (hidden)</echo>
+	<gen count="5" output="hide">
+		<counter/>
+	</gen>
+	<echo>Five counters (to counters.dat)</echo>
+	<gen count="5" output="output.dat">
+		<counter/>
+	</gen>
+	<gen count="1" output="output.dat">
+		<counter begin="100" />
+	</gen>
+	-->
+</csvt>

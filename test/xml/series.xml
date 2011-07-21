@@ -1,0 +1,23 @@
+<csvt>
+	<gen name="real_seq" count="100" output="hide">
+		<real_seq begin="1" end="100" inc="0.125" places="4"/>
+	</gen>
+
+	<gen name="date" count="20" output="hide" group="1">
+		<rand_date begin="1970-01-01" end="2010-01-01" />
+	</gen>
+
+	<gen>
+		<series gen="date" fields="1" random="yes" >
+			<rows random="no">
+				Fred
+				Fred
+				Bill
+				Jim
+				Jim
+				Jim
+				Eric
+			</rows>
+		</series>
+	</gen>
+</csvt>

@@ -1,0 +1,31 @@
+<csvt>
+	<gen count="5" output="people.csv">
+	    <remember name="people_key" >
+			<unique>
+				<datafile file="forenames.dat" order= "1" random="yes"/>
+				<datafile file="surnames.dat" random="yes"/>
+			</unique>
+		</remember>
+		<include file="address.xml" />
+	</gen>	
+	<gen count="5" output="pets.csv">
+		<unique>
+			<recall name="people_key" />	
+			<select>
+				<rows values="cat,dog,hamster" />
+				<case values="cat">
+					<rows values="Fluffy,Tibbles,Puss,Mehitabel,Greebo" />
+				</case>
+				<case values="dog" >
+					<rows values="Bowser,Fido,Fang,Lassie" />
+				</case>
+				<case values="hamster" >
+					<datafile file="forenames.dat" order="1" />
+					<row values="Rodents Rule!" />
+				</case>
+			</select>
+		</unique>
+    </gen>
+</csvt>
+
+

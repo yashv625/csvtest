@@ -1,0 +1,12 @@
+<csvt>
+	<echo>Seed and single random number</echo>
+	<gen>
+		<random_seed/>
+		<random_number/>
+	</gen>
+	<echo>Ten random numbers</echo>
+	<gen count="10" >
+		<counter/>
+		<random_number/>
+	</gen>
+</csvt>

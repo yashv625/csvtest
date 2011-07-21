@@ -1,0 +1,8 @@
+<csvt>
+	<gen name="intseq" count="20">
+		<int_seq begin="1" end="10"/>
+	</gen>
+	<gen name="randint" count="20">
+		<rand_int begin="1" end="100" mode="1"/>
+	</gen>
+</csvt>

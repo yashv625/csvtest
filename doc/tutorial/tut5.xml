@@ -1,0 +1,8 @@
+<csvt>
+	<gen count="5">
+		<datafile file="forenames.dat" order= "1" />
+		<datafile file="surnames.dat" />
+		<rand_date begin="1920-01-01" end="1989-01-1" />
+		<rand_time/>
+	</gen>
+</csvt>

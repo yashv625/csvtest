@@ -1,0 +1,8 @@
+<csvt>
+	<gen count="5">
+		<mask value="[0-9][0-9]*3" />
+		<mask value="[A-Z]" />
+		<mask value="\[XYZ\]" />
+		<mask value="abc?4" />
+	</gen>
+</csvt

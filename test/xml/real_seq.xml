@@ -1,0 +1,8 @@
+<csvt>
+	Test real sequences
+	<gen name="real_seq" count="10">
+		<real_seq begin="1" end="100" inc="0.125" places="4"/>
+		<rand_real begin="1" end="100" places="4"/>
+		<rand_real begin="1" end="100" mode="1" places="3"/>
+	</gen>
+</csvt>

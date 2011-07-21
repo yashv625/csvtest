@@ -1,0 +1,6 @@
+<csvt>
+	<gen name="simple" count="10">
+		<counter/>
+		<counter begin="100" inc="5"/>
+	</gen>
+</csvt>

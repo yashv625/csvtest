@@ -1,0 +1,9 @@
+<merge>
+	<rand_int begin="1" end="150" mode ="1"/>
+	<pick  distribute="80,20">
+		<row values="" />
+		<rows values="Upper,Lower,,Greater,Little" random="yes" />
+	</pick>
+	<datafile file="surnames.dat" random="yes"/>
+	<datafile file="streettypes.dat" random="yes" order="2"/>
+</merge>

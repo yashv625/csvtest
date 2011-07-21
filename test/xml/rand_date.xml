@@ -1,0 +1,7 @@
+<csvt>
+	<gen count="10">
+		<rand_date />
+		<rand_date begin="2000-01-01" end="2005-01-01" />
+		<rand_date begin="2000-01-01" end="2005-01-01" mode="2005-01-01"/>
+	</gen>
+</csvt>

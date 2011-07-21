@@ -1,0 +1,9 @@
+<csvt>
+	<gen count="10" >
+		<rows freq="1">
+			10,10% freq,AAAAAAAAAA
+			20,20% freq,BBBBBBBBBB
+			70,70% freq,CCCCCCCCCC
+		</rows>
+	</gen>
+</csvt>

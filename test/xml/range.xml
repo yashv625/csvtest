@@ -1,0 +1,13 @@
+<csvt>
+	<gen count="10">
+		<range width='2,10' fill='no'>
+		   <int_seq  begin='1' end='100' />
+		</range>
+	</gen>
+
+	<gen count="10">
+		<range width='2,10' fill='no'>
+		   <date_seq  begin='1990-01-01' end='2009-01-01' inc="100"/>
+		</range>
+	</gen>
+</csvt>

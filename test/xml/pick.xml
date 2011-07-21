@@ -1,0 +1,28 @@
+<csvt>
+<!--
+	<gen name="pick-alternate" count="10">
+		<counter/>
+		<pick random="no">
+			<row values="foo" />
+			<row values="bar" />
+		</pick>
+	</gen>
+-->
+	<gen name="pick-alternate" count="10">
+		<counter/>
+		<pick random="yes">
+			<row values="foo" />
+			<row values="bar" />
+		</pick>
+	</gen>
+<!--
+	<gen name="pick-random" count="100"  >
+		<counter/>
+		<pick random="yes">distribute="10,10,80" 
+			<row values="foo" />
+			<row values="ddd" />
+			<row values="zzzzzzzz" />
+		</pick>
+	</gen>
+-->
+</csvt>

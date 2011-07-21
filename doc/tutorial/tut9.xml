@@ -1,0 +1,42 @@
+<csvt>
+	<gen name="people" count="5" output="hide">
+		<unique>
+			<datafile file="forenames.dat" order= "1" random="yes"/>
+			<datafile file="surnames.dat" random="yes"/>
+		</unique>
+		<include file="address.xml" />
+	</gen>	
+
+	<gen name="jobs" output="hide">
+	  <counter/>
+	  <rows random="no" > 
+		1,PG,Programmer
+		2,SA,Systems Analyst
+		3,SC,Secretary
+		4,MG,Manager
+	  </rows>
+	</gen>
+
+	<gen name="pj1" count="5" output="hide" >
+	  <m2m random="no">
+		<left gen="people" fields="1,2"/>
+		<right gen="jobs" />
+	  </m2m>
+	</gen>
+
+	<gen name="pj2" count="5" output="hide" >
+	  <m2m random="yes">
+		<left gen="people" fields="1,2"/>
+		<right gen="jobs" />
+	  </m2m>
+	</gen>
+
+	<gen>
+		<union >
+			<recall name="pj1" random="no" />
+			<recall name="pj2" random="no" />
+		</union>
+	</gen>
+</csvt>
+
+

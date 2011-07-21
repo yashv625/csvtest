@@ -1,0 +1,13 @@
+<csvt>
+	<gen fields="number,name">
+		<datafile file="digits.dat"  />
+	</gen>
+	<gen>
+		<counter/>
+		<datafile file="digits.dat" random="yes" />
+	</gen>
+	<gen>
+		<counter/>
+		<datafile file="digits.dat" order="2,1" random="yes" />
+	</gen>
+</csvt>

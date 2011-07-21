@@ -1,0 +1,7 @@
+<csvt>
+	<gen count="10">
+		<time_seq begin="00:00:00" end="10:00:00" inc="65" />
+		<rand_time/>
+		<rand_time begin="10:00:00" end="12:00:00" />
+	</gen>
+</csvt>

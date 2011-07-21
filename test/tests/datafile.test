@@ -1,0 +1,1 @@
+$CSVTEST -rn 1 xml/datafile.xml

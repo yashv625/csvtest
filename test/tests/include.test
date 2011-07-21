@@ -1,0 +1,3 @@
+# need to change directories to get include path to work
+cd xml 
+$CSVTEST -rn 1 include.xml

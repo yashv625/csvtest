@@ -1,0 +1,14 @@
+<csvt>
+	<echo>Random dates in range</echo>
+	<gen count="5">
+		<random_date begin="1990-01-01" end="2000-01-01"/>
+	</gen>
+	<echo>Random date in current year</echo>
+	<gen count="5">
+		<random_date/>
+	</gen>
+	<echo>Date sequence</echo>
+	<gen>
+		<date_seq begin="2000-01-01" end="2000-01-05"/>
+	</gen>
+</csvt>

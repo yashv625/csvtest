@@ -1,0 +1,6 @@
+<csvt>
+	<gen count="5">
+		<counter/>
+		<include file="foo.xml" />
+	</gen>
+</csvt>

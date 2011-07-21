@@ -1,0 +1,21 @@
+<csvt>
+	<gen name="gena">
+		<counter/>
+		<rows values="one,two,three" random="no" />
+	</gen>
+
+	<gen name="genb">
+		<counter begin="1000"/>
+		<rows values="alpha,beta" random="no" />
+	</gen>
+
+	<gen name="m2m" count="5">
+		<counter/>
+		<m2m unique="no" random="yes">
+			<left gen="gena" />
+			<right gen="genb" />
+		</m2m>
+	</gen>
+
+</csvt>
+

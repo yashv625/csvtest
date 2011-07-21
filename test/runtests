@@ -1,0 +1,109 @@
+#bash
+# runtests
+# run all tests in tests directory, comparing output
+# with that saved in the output directory
+# Copyright (C) 2009 Neil Butterworth
+#####################################################
+#set -x
+
+#####################################################
+
+TESTDIR=tests
+TESTPAT=*.test
+OUTDIR=good
+TMPDIR=tmp
+TMPFILE=out
+DIFFOUT=diffout
+ECHO=0
+
+CSVTEST=/d/Users/NeilB/devel/csvtest/csvtest.exe
+export CSVTEST
+
+#####################################################
+
+error()
+{
+	echo "Error: $*"
+	exit 1
+}
+
+
+#####################################################
+
+passed()
+{
+	echo "Test passed: $1"
+}
+
+#####################################################
+
+failed()
+{
+	echo "Test failed: " $1
+	cat $2
+}
+
+#####################################################
+
+run1()
+{
+	testname=`basename $1`
+	tmp=$TMPDIR/$TMPFILE
+	diffout=$TMPDIR/$DIFFOUT
+
+	if [ "$ECHO" = "1" ]
+	then
+		bash "$1"  
+		return
+	fi
+
+	bash "$1"  &> $tmp 
+	if 	diff $OUTDIR/$testname $tmp > $diffout 
+	then
+		passed $1
+	else
+		failed $1 "$diffout"
+	fi
+}
+
+
+#####################################################
+
+runall()
+{
+	for TEST in $TESTDIR/*.test 
+	do
+		run1 $TEST
+	done
+}
+
+#####################################################
+
+runsome() 
+{
+	for TEST in $*
+	do
+		run1 $TEST
+	done
+}
+
+#####################################################
+
+while true
+do
+	if [ "$1" = '-e' ]
+	then
+		ECHO=1
+		shift
+	else
+		break
+	fi
+done
+
+if [ "$1" = "" ]
+then
+	runall
+else
+	runsome $*
+fi
+

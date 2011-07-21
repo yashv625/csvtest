@@ -1,0 +1,19 @@
+<csvt>
+  <gen>
+  	<counter/>
+	<rand_int/>
+	<rand_real/>
+	<rand_date/>
+	<rand_time/>
+	<!--
+    <date_seq begin="2000-01-01" end="2001-01-01" inc="5" />
+	-->
+  </gen>
+
+  	<gen count="20" >
+  		<rand_int begin="0" end="10" />
+		<rand_real  begin="0.0" end="1.0" />
+	</gen>
+
+</csvt>
+

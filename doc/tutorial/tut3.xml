@@ -1,0 +1,7 @@
+<csvt>
+	<gen count="40">
+		<datafile file="forenames.dat" order= "1" random="yes"/>
+		<datafile file="surnames.dat" random="yes"/>
+		<include file="address.xml" />
+	</gen>
+</csvt>

@@ -1,0 +1,6 @@
+<csvt>
+	<gen count="5">
+		<datafile file="forenames.dat" order= "1" />
+		<datafile file="surnames.dat" />
+	</gen>
+</csvt>
