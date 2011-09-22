@@ -17,9 +17,6 @@
 					<Add directory="inc" />
 					<Add directory="..\alib\inc" />
 				</Compiler>
-				<Linker>
-					<Add library="..\alib\lib\alib.a" />
-				</Linker>
 				<ExtraCommands>
 					<Add after="cp  bin/Debug/csvtest.exe ." />
 					<Mode after="always" />
@@ -41,40 +38,57 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="inc" />
+			<Add directory="..\csvfix\alib\inc" />
 		</Compiler>
-		<Unit filename="..\alib\inc\_template.h" />
-		<Unit filename="..\alib\inc\a_assert.h" />
-		<Unit filename="..\alib\inc\a_base.h" />
-		<Unit filename="..\alib\inc\a_chsrc.h" />
-		<Unit filename="..\alib\inc\a_collect.h" />
-		<Unit filename="..\alib\inc\a_csv.h" />
-		<Unit filename="..\alib\inc\a_date.h" />
-		<Unit filename="..\alib\inc\a_db.h" />
-		<Unit filename="..\alib\inc\a_debug.h" />
-		<Unit filename="..\alib\inc\a_dict.h" />
-		<Unit filename="..\alib\inc\a_enc.h" />
-		<Unit filename="..\alib\inc\a_env.h" />
-		<Unit filename="..\alib\inc\a_except.h" />
-		<Unit filename="..\alib\inc\a_expr.h" />
-		<Unit filename="..\alib\inc\a_file.h" />
-		<Unit filename="..\alib\inc\a_html.h" />
-		<Unit filename="..\alib\inc\a_lib.h" />
-		<Unit filename="..\alib\inc\a_log.h" />
-		<Unit filename="..\alib\inc\a_math.h" />
-		<Unit filename="..\alib\inc\a_myth.h" />
-		<Unit filename="..\alib\inc\a_nameval.h" />
-		<Unit filename="..\alib\inc\a_rand.h" />
-		<Unit filename="..\alib\inc\a_range.h" />
-		<Unit filename="..\alib\inc\a_regex.h" />
-		<Unit filename="..\alib\inc\a_shstr.h" />
-		<Unit filename="..\alib\inc\a_sort.h" />
-		<Unit filename="..\alib\inc\a_str.h" />
-		<Unit filename="..\alib\inc\a_table.h" />
-		<Unit filename="..\alib\inc\a_test.h" />
-		<Unit filename="..\alib\inc\a_valptr.h" />
-		<Unit filename="..\alib\inc\a_xmlevents.h" />
-		<Unit filename="..\alib\inc\a_xmlparser.h" />
-		<Unit filename="..\alib\inc\a_xmltree.h" />
+		<Linker>
+			<Add library="..\csvfix\alib\lib\alib.a" />
+		</Linker>
+		<Unit filename="..\csvfix\alib\inc\_template.h" />
+		<Unit filename="..\csvfix\alib\inc\a_assert.h" />
+		<Unit filename="..\csvfix\alib\inc\a_base.h" />
+		<Unit filename="..\csvfix\alib\inc\a_chsrc.h" />
+		<Unit filename="..\csvfix\alib\inc\a_collect.h" />
+		<Unit filename="..\csvfix\alib\inc\a_csv.h" />
+		<Unit filename="..\csvfix\alib\inc\a_date.h" />
+		<Unit filename="..\csvfix\alib\inc\a_db.h" />
+		<Unit filename="..\csvfix\alib\inc\a_debug.h" />
+		<Unit filename="..\csvfix\alib\inc\a_dict.h" />
+		<Unit filename="..\csvfix\alib\inc\a_dir.h" />
+		<Unit filename="..\csvfix\alib\inc\a_enc.h" />
+		<Unit filename="..\csvfix\alib\inc\a_env.h" />
+		<Unit filename="..\csvfix\alib\inc\a_except.h" />
+		<Unit filename="..\csvfix\alib\inc\a_exec.h" />
+		<Unit filename="..\csvfix\alib\inc\a_expr.h" />
+		<Unit filename="..\csvfix\alib\inc\a_file.h" />
+		<Unit filename="..\csvfix\alib\inc\a_html.h" />
+		<Unit filename="..\csvfix\alib\inc\a_inifile.h" />
+		<Unit filename="..\csvfix\alib\inc\a_io.h" />
+		<Unit filename="..\csvfix\alib\inc\a_log.h" />
+		<Unit filename="..\csvfix\alib\inc\a_math.h" />
+		<Unit filename="..\csvfix\alib\inc\a_matrix.h" />
+		<Unit filename="..\csvfix\alib\inc\a_myth.h" />
+		<Unit filename="..\csvfix\alib\inc\a_nameval.h" />
+		<Unit filename="..\csvfix\alib\inc\a_nullstream.h" />
+		<Unit filename="..\csvfix\alib\inc\a_opsys.h" />
+		<Unit filename="..\csvfix\alib\inc\a_rand.h" />
+		<Unit filename="..\csvfix\alib\inc\a_range.h" />
+		<Unit filename="..\csvfix\alib\inc\a_regex.h" />
+		<Unit filename="..\csvfix\alib\inc\a_shstr.h" />
+		<Unit filename="..\csvfix\alib\inc\a_slice.h" />
+		<Unit filename="..\csvfix\alib\inc\a_sort.h" />
+		<Unit filename="..\csvfix\alib\inc\a_str.h" />
+		<Unit filename="..\csvfix\alib\inc\a_strscan.h" />
+		<Unit filename="..\csvfix\alib\inc\a_table.h" />
+		<Unit filename="..\csvfix\alib\inc\a_time.h" />
+		<Unit filename="..\csvfix\alib\inc\a_util.h" />
+		<Unit filename="..\csvfix\alib\inc\a_valptr.h" />
+		<Unit filename="..\csvfix\alib\inc\a_win.h" />
+		<Unit filename="..\csvfix\alib\inc\a_winerr.h" />
+		<Unit filename="..\csvfix\alib\inc\a_xmlevents.h" />
+		<Unit filename="..\csvfix\alib\inc\a_xmlparser.h" />
+		<Unit filename="..\csvfix\alib\inc\a_xmltree.h" />
+		<Unit filename="..\csvfix\alib\inc\mainpage.h" />
 		<Unit filename="csvtest.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>

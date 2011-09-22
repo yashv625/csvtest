@@ -10,6 +10,7 @@
 #include "dmk_xmlutil.h"
 #include "dmk_strings.h"
 #include "dmk_fileman.h"
+#include "dmk_modman.h"
 #include <iostream>
 #include <cstdarg>
 
@@ -243,7 +244,14 @@ bool GetRandom( const ALib::XMLElement * e, const string & defval ) {
 
 int GetCount( const ALib::XMLElement * e ) {
 	string s = e->AttrValue( COUNT_ATTRIB, ALL_STR );
-	if ( s == ALL_STR ) {
+	if ( s == "N" || s == "n" ) {
+		int n = ModelManager::Instance()->CommandLineCount();
+		if ( n == -1 ) {
+			throw XMLError( "count attribute value of N, but -n flag not used on command line", e );
+		}
+		return n;
+	}
+	else if ( s == ALL_STR ) {
 		return -1;
 	}
 	else {

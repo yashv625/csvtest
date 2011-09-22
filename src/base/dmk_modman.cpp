@@ -179,12 +179,24 @@ Generator * ModelManager :: FindGen( const std::string & name ) const {
 // Run models giving them stream as default output
 //----------------------------------------------------------------------------
 
-void ModelManager :: RunModels( std::ostream & os ) {
+void ModelManager :: RunModels( std::ostream & ) {
 	for ( unsigned int i = 0; i < mModels.size(); i++ ) {
 		if ( mModels[i].mMode != mmCheckOnly ) {
 			mModels[i].mModel->Generate();
 		}
 	}
+}
+
+//----------------------------------------------------------------------------
+// Access count specified on command line
+//----------------------------------------------------------------------------
+
+int ModelManager :: CommandLineCount() const {
+	return mCmdLineCount;
+}
+
+int & ModelManager :: CommandLineCount() {
+	return mCmdLineCount;
 }
 
 //----------------------------------------------------------------------------

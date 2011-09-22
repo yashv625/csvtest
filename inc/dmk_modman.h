@@ -36,6 +36,8 @@ class ModelManager {
 
 		static ModelManager * Instance();
 
+		int CommandLineCount() const;
+		int & CommandLineCount();
 
 	private:
 
@@ -55,6 +57,7 @@ class ModelManager {
 		};
 
 		std::vector <MME> mModels;
+		int mCmdLineCount;
 
 };
 

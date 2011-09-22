@@ -31,6 +31,8 @@ class DMKRun {
 	private:
 
 		void SeedRNG();
+		void SetCmdLineCount();
+
 		ALib::CommandLine mCmdLine;
 		ALib::XMLTreeParser mParser;
 		DMK::ModelBuilder mBuilder;

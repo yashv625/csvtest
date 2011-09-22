@@ -126,7 +126,13 @@ void DSDataFile :: Populate() {
 	}
 
 	// hard code data path for now
-	string fpath = ALib::ExePath() + "/data/" + mFilename;
+	string fpath;
+	if ( ALib::Peek( mFilename, 0 ) == '.' ) {
+		fpath = mFilename;
+	}
+	else {
+		fpath = ALib::ExePath() + "/data/" + mFilename;
+	}
 	std::ifstream ifs( fpath.c_str() );
 	if ( ! ifs.is_open() ) {
 		throw Exception( "Cannot open file " + fpath + " for input" );

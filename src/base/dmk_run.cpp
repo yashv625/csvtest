@@ -27,6 +27,8 @@ const char * const FORMAT_FLAG 	= "-f";
 const char * const GEN_FLAG 		= "-g";
 const char * const RANDVAL_FLAG 	= "-rn";
 const char * const TIME_SEED		= "time";
+const char * const COUNT_FLAG		= "-n";
+
 
 //----------------------------------------------------------------------------
 
@@ -74,6 +76,7 @@ int DMKRun :: Run() {
 
 		FileManager fm( std::cout );	// create singleton
 		mCmdLine.AddFlag( ALib::CommandLineFlag( RANDVAL_FLAG, false, 1, true ) );
+		mCmdLine.AddFlag( ALib::CommandLineFlag( COUNT_FLAG, false, 1, true ) );
 		mCmdLine.CheckFlags(1);
 /*
 		mCmdLine.AddFlag( ALib::CommandLineFlag( GEN_FLAG, false, 1, true ) );
@@ -83,6 +86,8 @@ int DMKRun :: Run() {
 		mCmdLine.CheckFlags(1);
 */
 		SeedRNG();
+		SetCmdLineCount();
+
 /*
 		int pos = 1;
 		while( pos < mCmdLine.Argc() ) {
@@ -119,6 +124,29 @@ int DMKRun :: Run() {
 		return -1;
 	}
 	return 0;
+}
+
+//----------------------------------------------------------------------------
+// Set count of output rows from command line.
+//----------------------------------------------------------------------------
+
+void DMKRun :: SetCmdLineCount() {
+	if ( mCmdLine.HasFlag( COUNT_FLAG ) ) {
+		string s = mCmdLine.GetValue( COUNT_FLAG, "" );
+		if ( ALib::IsInteger( s ) ) {
+			int n = ALib::ToInteger( s );
+			if ( n < 0 ) {
+				throw Exception( "Invalid value for count: " + s );
+			}
+			ModelManager::Instance()->CommandLineCount() = n;
+		}
+		else {
+			throw Exception( "Count must be integer, not: " + s );
+		}
+	}
+	else {
+		ModelManager::Instance()->CommandLineCount() = -1;
+	}
 }
 
 //----------------------------------------------------------------------------
