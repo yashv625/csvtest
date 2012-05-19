@@ -47,6 +47,7 @@ CompositeDataSource :: CompositeDataSource( const FieldList & order )
 	: DataSource( order ) {
 }
 
+
 CompositeDataSource :: ~CompositeDataSource() {
 	ALib::FreeClear( mSources );
 }

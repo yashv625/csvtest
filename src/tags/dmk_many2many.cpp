@@ -72,7 +72,7 @@ class ManyToMany : public CompositeDataSource {
 };
 
 //----------------------------------------------------------------------------
-// Sequentioal meany to many
+// Sequential many to many
 //----------------------------------------------------------------------------
 
 class SeqManyToMany : public ManyToMany {
@@ -122,13 +122,13 @@ class RandManyToMany : public ManyToMany {
 
 
 //----------------------------------------------------------------------------
-// Register the bas class - the base creates the actual types.
+// Register the base class - the base creates the actual types.
 //----------------------------------------------------------------------------
 
 static RegisterDS <ManyToMany> regrs1_( M2M_TAG );
 
 //----------------------------------------------------------------------------
-// Dups flag indicates if duplicates are alloed
+// Dups flag indicates if duplicates are allowed
 //----------------------------------------------------------------------------
 
 ManyToMany :: ManyToMany( const FieldList & order, bool dupes )
