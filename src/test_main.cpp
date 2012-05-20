@@ -3,7 +3,7 @@
 //
 // main for the dmk3 test build
 //
-// Copyright (C) 2009 Neil Butterworth
+// Copyright (C) 2012 Neil Butterworth
 //----------------------------------------------------------------------------
 
 #include "a_myth.h"
